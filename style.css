@@ -23,3 +23,21 @@
  font-family: cursive;
  font-size: 11px;
 }
+
+.mytext::-webkit-scrollbar {
+    width: 10px;
+    background-color: #F5F5F5;
+}
+
+.mytext::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+}
+
+.mytext::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+.mytext::-webkit-scrollbar-track {
+    background-color: #F5F5F5;
+}
