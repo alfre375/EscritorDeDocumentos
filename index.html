@@ -1,4 +1,4 @@
-<html>
+<html onload="setLang(this)">
     <head>
         <title>Escritor de Documentos</title>
         <link rel="stylesheet" href="style.css">
@@ -12,6 +12,7 @@
             <option value="zcool-kuaile">ZCOOL Felíz</option>
         </select>   
         <!--<input type="range" name="size" id="size" onchange="changeSize(this)" min="1" max="100">--> <a>Tamaño:</a> <input type="number" name="size" id="size" onchange="changeSize(this)" value="11" min="1" max="400"> px
+          <input type="color" name="color" id="color" onchange="changeColor(this)">
         <textarea name="text" id="text" cols="30" rows="10" class="mytext"></textarea>
     </body>
 </html>

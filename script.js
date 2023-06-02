@@ -11,3 +11,12 @@ function changeSize(selector) {
     textBox = getTextBox()
     textBox.style.fontSize = selector.value
 }
+
+function changeColor(selector) {
+    textBox = getTextBox()
+    textBox.style.color = selector.value
+}
+
+function changeLanguage(html) {
+    console.log("Cambiando Idioma")
+}
