@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Escritor de Documentos</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <script src="script.js"></script>
+        <label for="font">Estilo:</label>
+        <select name="font" id="font" onchange="changeFont(this)">
+            <option value="cursive">Cursiva</option>
+            <option value="oxygen">Oxygeno</option>
+            <option value="zcool-kuaile">ZCOOL Felíz</option>
+        </select>   
+        <!--<input type="range" name="size" id="size" onchange="changeSize(this)" min="1" max="100">--> <a>Tamaño:</a> <input type="number" name="size" id="size" onchange="changeSize(this)" value="11" min="1" max="400"> px
+        <textarea name="text" id="text" cols="30" rows="10" class="mytext"></textarea>
+    </body>
+</html>

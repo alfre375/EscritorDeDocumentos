@@ -1,0 +1,25 @@
+@font-face {
+    font-family: "oxygen";
+    src: url("./assets/fonts/Oxygen/Oxygen-Bold.ttf");
+    src: url("./assets/fonts/Oxygen/Oxygen-Light.ttf");
+    src: url("./assets/fonts/Oxygen/Oxygen-Regular.ttf");
+}
+
+@font-face {
+    font-family: "zcool-kuaile";
+    src: url("./assets/fonts/ZCOOL-KuaiLe/ZCOOLKuaiLe-Regular.ttf");
+}
+
+
+.mytext {
+ height: 206pt;
+ width: 95%;
+ scroll-behavior: initial;
+ border-radius: 10pt;
+ padding-left: 10pt;
+ padding-top: 8pt;
+ padding-right: 10pt;
+ padding-bottom: 10pt;
+ font-family: cursive;
+ font-size: 11px;
+}
