@@ -23,3 +23,30 @@ function changeColor(selector) {
 function changeLanguage(html) {
     console.log("Cambiando Idioma")
 }
+
+charmap = undefined;
+
+function onChangeAssistedTypingMode(ats) {
+    let atsv = ats.value;
+    if (atsv == "none") {
+        charmap = undefined;
+        return
+    }
+    let charmapFN = "./assets/assisted-typing/" + atsv + "-charmap.json"
+    console.log("File name is", charmapFN)
+    fetch(charmapFN).then(x => x.text()).
+    then(x =>{
+        charmap = JSON.parse(x)
+    });
+}
+function replaceSpecialSequences(editor){
+    if (charmap == undefined) {return;}
+    let text = editor.value;
+    let charTable = charmap;
+    let newtext = text;
+    for(let code in charTable){
+        newtext = newtext.replaceAll(code, charTable[code]);
+    }
+    editor.value = newtext;
+}
+    

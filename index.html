@@ -10,9 +10,15 @@
             <option value="cursive">Cursiva</option>
             <option value="oxygen">Oxygeno</option>
             <option value="zcool-kuaile">ZCOOL Felíz</option>
+            <option value="ojiyubante">OJi Y Ubante</option>
         </select>   
         <!--<input type="range" name="size" id="size" onchange="changeSize(this)" min="1" max="100">--> <a>Tamaño:</a> <input type="number" name="size" id="size" onchange="changeSize(this)" value="11" min="1" max="400"> px
-          <input type="color" name="color" id="color" onchange="changeColor(this)">
-        <textarea name="text" id="text" cols="30" rows="10" class="mytext"></textarea>
+        <input type="color" name="color" id="color" onchange="changeColor(this)">&nbsp;
+        <label for="assisted-typing">Escritura Asistida: </label><select name="assisted-typing" id="assisted-typing" onchange="onChangeAssistedTypingMode(this)">
+            <option value="none">Apagado</option>
+            <option value="oji">OJi</option>
+            <option value="ubante">Ubante</option>
+        </select>
+        <textarea name="text" id="text" cols="30" rows="10" class="mytext" onkeyup="replaceSpecialSequences(this)"></textarea>
     </body>
 </html>
