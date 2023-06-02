@@ -9,6 +9,9 @@ function changeFont(selector) {
 
 function changeSize(selector) {
     textBox = getTextBox()
+    if (selector.value > 40) {
+        selector.value = 40
+    }
     textBox.style.fontSize = selector.value
 }
 
