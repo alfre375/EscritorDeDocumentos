@@ -7,10 +7,11 @@ function changeFont(selector) {
     textBox.style.fontFamily = selector.value
 }
 
+let sizeLimit = 400;
 function changeSize(selector) {
     textBox = getTextBox()
-    if (selector.value > 40) {
-        selector.value = 40
+    if (selector.value > sizeLimit) {
+        selector.value = sizeLimit
     }
     textBox.style.fontSize = selector.value
 }
