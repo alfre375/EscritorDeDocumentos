@@ -50,4 +50,48 @@ function replaceSpecialSequences(editor){
     }
     editor.value = newtext;
 }
-    
+
+function downloadPlainTxt(val) {
+    //get the name of the file
+    let n = prompt("Ingresa nombre sin terminación");
+    //create a file and put the content, name and type
+    var file = new File(["\ufeff" + val], `${n}.txt`);
+    //create a ObjectURL in order to download the created file
+    url = window.URL.createObjectURL(file);
+    //create a hidden link and set the href and click it
+    var a = document.createElement('a');
+    a.style = "display: none";
+    a.href = url;
+    a.download = file.name;
+    a.click();
+    window.URL.revokeObjectURL(url);
+}
+
+function uploadAndRead(fs){
+    console.log(fs.files[0].name)
+    console.log(fs.files)
+    let extension = "." + fs.files[0].name.split('.')[1];
+    console.log(extension)
+    let file = fs.files[0]
+    console.log(file)
+    if (extension == ".txt") {
+        conf = confirm("¿Estas seguro? Se remplazara el texto actual.")
+        if (conf == true) {
+            const reader = new FileReader();
+            reader.addEventListener(
+                "load",
+                () => {
+                  // this will then display a text file
+                  document.getElementById('text').innerText = reader.result;
+                },
+                false
+            );
+            if (file) {
+                reader.readAsText(file)
+            }
+        }
+    } else {
+        file.value = null;
+        alert("Solo se acceptan .txt. Usted uso " + extension)
+    }
+}

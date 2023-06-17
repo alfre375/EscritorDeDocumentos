@@ -19,6 +19,9 @@
             <option value="oji">OJi</option>
             <option value="ubante">Ubante</option>
         </select>
+        <button onclick="downloadPlainTxt(document.getElementById('text').value)">Descargar sin formato</button>
+        <button onclick="document.getElementById('fileToLoad').click()">Subir Archivo</button>
+        <input type="file" id="fileToLoad" onchange="uploadAndRead(this)" style="display: none;">
         <textarea name="text" id="text" cols="30" rows="10" class="mytext" onkeyup="replaceSpecialSequences(this)"></textarea>
     </body>
 </html>
